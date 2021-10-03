@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome Back</title>
   <link rel="shortcut icon" href="assets/Logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
   <!--Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,12 @@
   </header>
   <main>
     <form action="#">
-      <label for="mailto"></label>
+      <label class="sr-only" for="mailto">email</label>
       <input type="email" name="email" id="mailto" placeholder="email">
-      <label for="password"></label>
+      <label class="sr-only" for="password">password</label>
       <input type="password" name="password" id="password" placeholder="password">
       <fieldset>
-        <label for="keep"><input type="checkbox" name="checkbox" id="keep">Keep me logged in</label>
+        <label for="keep"><input type="checkbox" name="checkbox" id="keep" class="keep">Keep me logged in</label>
       </fieldset>
     </form>
     <a href="#" class="button">Log in</a>

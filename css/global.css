@@ -19,11 +19,24 @@ html{
   font-size: 62.5%;
 }
 
-/*=========HEADER*/
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+
+}
+
+/*=========HEADER=============*/
 
 header img{
   display: block;
-  margin: 8rem auto 4rem;
+  margin: 5rem auto 4rem;
 }
 
 header h1 {
@@ -44,6 +57,10 @@ main form input{
   background: var(--back-input);
   border: none;
   border-radius: .5rem;
+  outline: none;
+  font-size: 2rem;
+  padding: 1.9rem;
+  text-transform: capitalize;
 }
 
 input::placeholder{
@@ -53,7 +70,7 @@ input::placeholder{
   font-family: 'Roboto',sans-serif;
 }
 
-input#keep{
+input.keep{
   width: 1.6rem;
   height: 1.6rem;
   margin: 1rem;
@@ -101,6 +118,8 @@ form fieldset label{
 
 a {
   text-decoration: none;
+  color: var(--title-orange);
+  margin: .5rem;
 }
 
 p{
@@ -111,14 +130,9 @@ p{
   margin: 5.1rem;
 }
 
-p a#register{
-  color: var(--title-orange);
-  margin: .5rem;
-}
-
 footer{
   text-align: center;
-  margin: 9.2rem 2.3rem;
+  margin: .9rem 2.3rem;
   color: var(--text-light-gray);
   font-size: 1.5rem;
   font-weight: 400;
