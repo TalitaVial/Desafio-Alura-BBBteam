@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  --title-orange: #F8982C;
+  --text-gray: #515151;
+  --text-light-gray: #989898;
+  --text-card-gray: #3B3B3B;
+  --text-white: #FFFFFF;
+  --text-purple: #BE49E8;
+  --text-blue: #5398E9;
+  --text-green: #2BBC5D;
+  --back-input: #F7F7F7;
+  --back-button: #F79D2D;
+
+  font-size: 62.5%;
+}
+
+/*=========HEADER*/
+
+header img{
+  display: block;
+  margin: 8rem auto 4rem;
+}
+
+header h1 {
+  text-align: center;
+  margin: 4rem 2.6rem;
+  font-size: 2.8rem;
+  color: var(--text-gray);
+  font-family: 'Roboto',sans-serif;
+}
+
+/*======FORM========*/
+
+main form input{
+  display: block;
+  margin: 1.7rem auto;
+  height: 6rem;
+  width: 32.2rem;
+  background: var(--back-input);
+  border: none;
+  border-radius: .5rem;
+}
+
+input::placeholder{
+  padding: 1.9rem;
+  color: var(--text-light-gray);
+  font-size: 2rem;
+  font-family: 'Roboto',sans-serif;
+}
+
+input#keep{
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 1rem;
+}
+
+form fieldset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.7rem auto;
+  border: none;
+  width: 100%;
+}
+
+form fieldset label{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--text-light-gray);
+}
+
+/*=========BUTTON===========*/
+
+.button{
+  background: var(--back-button);
+  width: 32.2rem;
+  height: 6rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.3rem auto;
+  color: var(--text-white);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  transition: .4s;
+}
+
+.button:hover{
+  filter: brightness(1.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+p{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: var(--text-light-gray);
+  margin: 5.1rem;
+}
+
+p a#register{
+  color: var(--title-orange);
+  margin: .5rem;
+}
+
+footer{
+  text-align: center;
+  margin: 9.2rem 2.3rem;
+  color: var(--text-light-gray);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
