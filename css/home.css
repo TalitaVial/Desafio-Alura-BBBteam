@@ -26,9 +26,22 @@ h1 {
   font-weight: bold;
 }
 
+nav #menu li{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.3rem;
+    color: var(--title-orange);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1rem;
+    cursor: pointer;
+}
+
 a{
   text-decoration: none;
-  color: var(--text-gray);
+  color: var(--text-white);
+  padding: 1.2rem 2.2rem;
+  background: #F8982C;
+  border-radius: .3rem;
 }
 
 nav ul{
@@ -107,7 +120,7 @@ nav button#btn-mobile{
     z-index: 1000;
   }
 
-  nav #menu li, a{
+  nav.active #menu li{
     font-family: 'Roboto',sans-serif;
     font-size: 1.3rem;
     color: var(--title-orange);
@@ -117,9 +130,33 @@ nav button#btn-mobile{
     margin: 1rem;
   }
 
+  nav #menu a {
+    background: transparent;
+    color: var(--title-orange);
+    margin: -2rem;
+
+  }
+
   nav ul{
     margin: 0;
   }
  
+  h1.title{
+    font-size: 5.5rem;
+    text-align: end;
+    margin-top: 12.2rem;
+    margin-bottom: 2.8rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  main p{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-light-gray);
+    text-align: justify;
+    width: 32.2rem;
+    height: 1.71rem;
+    margin: 2.8rem auto;
+  }
   
 }
