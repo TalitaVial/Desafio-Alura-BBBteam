@@ -1,0 +1,125 @@
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+  background: var(--back-input);
+}
+
+header div img {
+  display: block;
+  margin: 1rem;
+  width: 30%;
+}
+
+div#cabecalho{
+  display: flex;
+  align-items: center;
+  
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--title-orange);
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+ul li {
+  list-style: none;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  color: var(--text-gray);
+}
+
+nav button#btn-mobile{
+  display: none;
+}
+
+@media (max-width: 600px){
+  nav button#btn-mobile{
+    display: flex;
+    cursor: pointer;
+    margin: 2rem;
+    border: none;
+    background: transparent;
+  }
+
+  #hamburguer{
+    width: 23px;
+    border-top: 2px solid #F8982C;
+  }
+
+  #hamburguer::after, #hamburguer::before{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 2px;
+    margin-top: 5px;
+    background: #F8982C;
+    position: relative;
+  }
+
+  nav.active #hamburguer{
+    border-top-color: transparent;
+  }
+
+  nav.active #hamburguer::after{
+    transform: rotate(135deg);
+    top: -7px;
+  }
+
+  nav.active #hamburguer::before{
+    transform: rotate(-135deg);
+    
+  }
+
+  #menu{
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background: var(--back-input);
+    visibility: hidden;
+    overflow: hidden;
+    transition: .6s;
+  }
+
+  nav.active #menu {
+    height: calc(100vh - 10rem);
+    visibility: visible;
+    overflow: auto;
+    z-index: 1000;
+  }
+
+  nav #menu li, a{
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.3rem;
+    color: var(--title-orange);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #f79c2d52;
+    margin: 1rem;
+  }
+
+  nav ul{
+    margin: 0;
+  }
+ 
+  
+}
