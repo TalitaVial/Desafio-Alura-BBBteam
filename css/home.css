@@ -1,50 +1,37 @@
-
-header{
+/*============HEADER=================*/
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10rem;
+  height: 7rem;
   background: var(--back-input);
 }
 
-header div img {
-  display: block;
-  margin: 1rem;
-  width: 30%;
-}
 
-div#cabecalho{
+div#cabecalho {
   display: flex;
   align-items: center;
-  
 }
 
-h1 {
-  font-size: 1.8rem;
+nav #menu li {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
   color: var(--title-orange);
+  text-transform: uppercase;
   font-weight: bold;
+  margin: 1rem;
+  cursor: pointer;
 }
 
-nav #menu li{
-    font-family: 'Roboto',sans-serif;
-    font-size: 1.3rem;
-    color: var(--title-orange);
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 1rem;
-    cursor: pointer;
-}
-
-a{
+a {
   text-decoration: none;
   color: var(--text-white);
   padding: 1.2rem 2.2rem;
-  background: #F8982C;
-  border-radius: .3rem;
+  background: #f8982c;
+  border-radius: 0.3rem;
 }
 
-nav ul{
+nav ul {
   display: flex;
   align-items: center;
   margin: 1rem;
@@ -58,105 +45,141 @@ ul li {
   color: var(--text-gray);
 }
 
-nav button#btn-mobile{
+nav button#btn-mobile {
   display: none;
 }
 
-@media (max-width: 600px){
-  nav button#btn-mobile{
-    display: flex;
-    cursor: pointer;
-    margin: 2rem;
-    border: none;
-    background: transparent;
-  }
 
-  #hamburguer{
-    width: 23px;
-    border-top: 2px solid #F8982C;
-  }
 
-  #hamburguer::after, #hamburguer::before{
-    content: "";
-    display: block;
-    width: 23px;
-    height: 2px;
-    margin-top: 5px;
-    background: #F8982C;
-    position: relative;
-  }
+  /*==========RESPONSIVO===========*/
+  @media (max-width: 600px) {
+    nav button#btn-mobile {
+      display: flex;
+      cursor: pointer;
+      margin: 2rem;
+      border: none;
+      background: transparent;
+    }
+  
+    #hamburguer {
+      width: 23px;
+      border-top: 2px solid #f8982c;
+    }
+  
+    #hamburguer::after,
+    #hamburguer::before {
+      content: '';
+      display: block;
+      width: 23px;
+      height: 2px;
+      margin-top: 5px;
+      background: #f8982c;
+      position: relative;
+    }
+  
+    nav.active #hamburguer {
+      border-top-color: transparent;
+    }
+  
+    nav.active #hamburguer::after {
+      transform: rotate(135deg);
+      top: -7px;
+    }
+  
+    nav.active #hamburguer::before {
+      transform: rotate(-135deg);
+    }
+  
+    #menu {
+      display: block;
+      position: absolute;
+      top: 7rem;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      background: var(--back-input);
+      visibility: hidden;
+      overflow: hidden;
+      transition: 0.6s;
+    }
+  
+    nav.active #menu {
+      height: calc(100vh - 7rem);
+      visibility: visible;
+      overflow: auto;
+      z-index: 1000;
+    }
+  
+    nav.active #menu li {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.3rem;
+      color: var(--title-orange);
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px solid #f79c2d52;
+      margin: 1rem;
+    }
+  
+    nav #menu a {
+      background: transparent;
+      color: var(--title-orange);
+      margin: -2rem;
+    }
+  
+    nav ul {
+      margin: 0;
+    }
 
-  nav.active #hamburguer{
-    border-top-color: transparent;
-  }
-
-  nav.active #hamburguer::after{
-    transform: rotate(135deg);
-    top: -7px;
-  }
-
-  nav.active #hamburguer::before{
-    transform: rotate(-135deg);
+    header div img {
+      display: block;
+      margin: 1rem;
+      width: 25%;
+    }
     
-  }
+    h1 {
+      font-size: 1.8rem;
+      font-family: 'Roboto', sans-serif;
+      color: var(--title-orange);
+      font-weight: bold;
+    }
 
-  #menu{
-    display: block;
-    position: absolute;
-    top: 10rem;
-    left: 0;
-    width: 100%;
-    height: 0px;
-    background: var(--back-input);
-    visibility: hidden;
-    overflow: hidden;
-    transition: .6s;
-  }
+    /*=================MAIN===================== */
 
-  nav.active #menu {
-    height: calc(100vh - 10rem);
-    visibility: visible;
-    overflow: auto;
-    z-index: 1000;
-  }
-
-  nav.active #menu li{
-    font-family: 'Roboto',sans-serif;
-    font-size: 1.3rem;
-    color: var(--title-orange);
-    text-transform: uppercase;
-    font-weight: bold;
-    border-bottom: 1px solid #f79c2d52;
-    margin: 1rem;
-  }
-
-  nav #menu a {
-    background: transparent;
-    color: var(--title-orange);
-    margin: -2rem;
-
-  }
-
-  nav ul{
-    margin: 0;
-  }
- 
-  h1.title{
+  h1.title {
     font-size: 5.5rem;
-    text-align: end;
-    margin-top: 12.2rem;
+    text-align: start;
+    margin: 6rem 1rem;
     margin-bottom: 2.8rem;
     font-family: 'Roboto', sans-serif;
   }
 
-  main p{
+  main p {
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     color: var(--text-light-gray);
-    text-align: justify;
+    text-align: left;
     width: 32.2rem;
     height: 1.71rem;
     margin: 2.8rem auto;
   }
+
+  #button {
+    background: var(--back-button);
+    width: 32.2rem;
+    height: 6rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 20rem auto  8rem auto;
+    color: var(--text-white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    transition: 0.4s;
+    border: none;
+  }
+
+  #button:hover{
+    filter: brightness(1.1);
+  }
   
-}
+  }  
