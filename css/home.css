@@ -143,13 +143,15 @@ nav button#btn-mobile {
       font-weight: bold;
     }
 
-    /*=================MAIN===================== */
+  /*=================MAIN===================== */
 
   h1.title {
     font-size: 5.5rem;
     text-align: start;
-    margin: 6rem 1rem;
+    margin: 6rem 2.3rem;
     margin-bottom: 2.8rem;
+    width: 33rem;
+    height: 15rem;
     font-family: 'Roboto', sans-serif;
   }
 
@@ -160,7 +162,7 @@ nav button#btn-mobile {
     text-align: left;
     width: 32.2rem;
     height: 1.71rem;
-    margin: 2.8rem auto;
+    margin: 3rem 2.3rem;
   }
 
   #button {
