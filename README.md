@@ -1,6 +1,7 @@
 # Desafio-Alura
 
-## BBT-Team (Banco)
+## BBB-Team (Banco)
+![logo](https://github.com/TalitaVial/Desafio-Alura-BBTeam/blob/master/assets/Logo.svg)
 - Desafio proposto no grupo de estudos da Alura, o objetivo é aprimorar o uso das tecnologias, HTML,CSS e JS.
 
 # Tecnologias utilizadas
