@@ -7,7 +7,6 @@ header {
   background: var(--back-input);
 }
 
-
 div#cabecalho {
   display: flex;
   align-items: center;
@@ -49,99 +48,97 @@ nav button#btn-mobile {
   display: none;
 }
 
+/*==========RESPONSIVO===========*/
+@media (max-width: 600px) {
+  nav button#btn-mobile {
+    display: flex;
+    cursor: pointer;
+    margin: 2rem;
+    border: none;
+    background: transparent;
+  }
 
+  #hamburguer {
+    width: 23px;
+    border-top: 2px solid #f8982c;
+  }
 
-  /*==========RESPONSIVO===========*/
-  @media (max-width: 600px) {
-    nav button#btn-mobile {
-      display: flex;
-      cursor: pointer;
-      margin: 2rem;
-      border: none;
-      background: transparent;
-    }
-  
-    #hamburguer {
-      width: 23px;
-      border-top: 2px solid #f8982c;
-    }
-  
-    #hamburguer::after,
-    #hamburguer::before {
-      content: '';
-      display: block;
-      width: 23px;
-      height: 2px;
-      margin-top: 5px;
-      background: #f8982c;
-      position: relative;
-    }
-  
-    nav.active #hamburguer {
-      border-top-color: transparent;
-    }
-  
-    nav.active #hamburguer::after {
-      transform: rotate(135deg);
-      top: -7px;
-    }
-  
-    nav.active #hamburguer::before {
-      transform: rotate(-135deg);
-    }
-  
-    #menu {
-      display: block;
-      position: absolute;
-      top: 7rem;
-      left: 0;
-      width: 100%;
-      height: 0px;
-      background: var(--back-input);
-      visibility: hidden;
-      overflow: hidden;
-      transition: 0.6s;
-    }
-  
-    nav.active #menu {
-      height: calc(100vh - 7rem);
-      visibility: visible;
-      overflow: auto;
-      z-index: 1000;
-    }
-  
-    nav.active #menu li {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.3rem;
-      color: var(--title-orange);
-      text-transform: uppercase;
-      font-weight: bold;
-      border-bottom: 1px solid #f79c2d52;
-      margin: 1rem;
-    }
-  
-    nav #menu a {
-      background: transparent;
-      color: var(--title-orange);
-      margin: -2rem;
-    }
-  
-    nav ul {
-      margin: 0;
-    }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: '';
+    display: block;
+    width: 23px;
+    height: 2px;
+    margin-top: 5px;
+    background: #f8982c;
+    position: relative;
+  }
 
-    header div img {
-      display: block;
-      margin: 1rem;
-      width: 25%;
-    }
-    
-    h1 {
-      font-size: 1.8rem;
-      font-family: 'Roboto', sans-serif;
-      color: var(--title-orange);
-      font-weight: bold;
-    }
+  nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+
+  nav.active #hamburguer::after {
+    transform: rotate(135deg);
+    top: -7px;
+  }
+
+  nav.active #hamburguer::before {
+    transform: rotate(-135deg);
+  }
+
+  #menu {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background: var(--back-input);
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+
+  nav.active #menu {
+    height: calc(100vh - 7rem);
+    visibility: visible;
+    overflow: auto;
+    z-index: 1000;
+  }
+
+  nav.active #menu li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    color: var(--title-orange);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #f79c2d52;
+    margin: 1rem;
+  }
+
+  nav #menu a {
+    background: transparent;
+    color: var(--title-orange);
+    margin: -2rem;
+  }
+
+  nav ul {
+    margin: 0;
+  }
+
+  header div img {
+    display: block;
+    margin: 1rem;
+    width: 25%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--title-orange);
+    font-weight: bold;
+  }
 
   /*=================MAIN===================== */
 
@@ -171,7 +168,7 @@ nav button#btn-mobile {
     height: 6rem;
     border-radius: 0.5rem;
     display: block;
-    margin: 20rem auto  8rem auto;
+    margin: 20rem auto 8rem auto;
     color: var(--text-white);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -180,8 +177,50 @@ nav button#btn-mobile {
     border: none;
   }
 
-  #button:hover{
+  #button:hover {
     filter: brightness(1.1);
   }
-  
-  }  
+
+  .cards {
+    border: 1px solid #be49e8;
+    border-radius: 0.8rem;
+    margin: 0 auto;
+    width: 29rem;
+    height: 28rem;
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .cards p {
+    margin: 3rem;
+    text-align: left;
+    color: var(--text-light-gray);
+  }
+
+  .cards:nth-child(2) {
+    border: 1px solid #5398e9;
+    margin: 3.2rem auto;
+  }
+
+  .cards:nth-child(3) {
+    border: 1px solid #2bbc5d;
+  }
+
+  .header-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.9rem;
+    font-family: 'Nunito', sans-serif;
+    margin: 1.6rem;
+    color: #be49e8;
+  }
+
+  .cards:nth-child(2) .header-cards {
+    color: #5398e9;
+  }
+
+  .cards:nth-child(3) .header-cards {
+    color: #2bbc5d;
+  }
+}
